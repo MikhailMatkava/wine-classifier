@@ -17,8 +17,6 @@
 
 ## Как запустить
 
-Проверено на Python 3.12. Команды выполняются из папки проекта.
-
 ```bash
 python -m venv .venv
 source .venv/bin/activate
