@@ -5,7 +5,6 @@ import json
 import joblib
 import numpy as np
 
-
 def read_sample(path, feature_names):
     with open(path, encoding='utf-8') as file:
         values = json.load(file)
@@ -19,7 +18,6 @@ def read_sample(path, feature_names):
         raise ValueError('NaN и бесконечные значения не поддерживаются.')
     return row
 
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('input', nargs='?', default='example.json')
@@ -31,7 +29,6 @@ def main():
         print(f'Predicted class: {int(saved["model"].predict(row)[0])}')
     except (OSError, ValueError) as error:
         parser.exit(2, f'Ошибка: {error}\n')
-
 
 if __name__ == '__main__':
     main()
